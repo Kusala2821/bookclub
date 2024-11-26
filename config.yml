@@ -1,0 +1,10 @@
+db:
+  host: 'mysql.clarksonmsda.org'
+  user: 'kureddy'
+  passwd: 'Kusala2821@'
+  db: 'kureddy.IA637'
+  port: 3306
+tables:
+  User: 'user'
+  
+

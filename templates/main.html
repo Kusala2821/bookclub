@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook Store - Main</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #0a1a2a; 
+            color: white;
+            padding: 30px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .logo img {
+            height: px;
+            margin-right: -2px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: lightgray;
+        }
+
+        .cart-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* New styles for image container */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            flex: 1 1 200px; /* Adjust width of each image */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            <strong>
+            <img src="{{ url_for('static', filename='images/Resize.jpg') }}" alt="Logo" class="img-responsive" style="position:relative; top:10px;" aria-label="E-Book Store Logo">
+            E-Book Store
+        </strong>
+        </a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/books">Books</a>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            <a href="/about">About</a>
+            <a href="/cart">
+                Cart <span class="cart-icon">🛒</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/banner1.jpg') }}" alt="Image 1">
+        <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Image 2">
+        <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Image 3">
+    </div>
+
+</body>
+</html>
